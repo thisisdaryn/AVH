@@ -368,7 +368,7 @@
 
 
 
-"programs":[{"name":"Acute Viral Hepatitis Case Report — Unified","shortName":"Acute Viral Hepatitis Case Report",
+"programs":[{"name":"Acute Viral Hepatitis Case Report","shortName":"Acute Viral Hepatitis Case Report",
 "description":"Unified case-based surveillance for acute viral hepatitis (A–E). Based on the WHO Template case report form for acute viral hepatitis (WHO, 2018) and WHO VPD Surveillance Standards 2018 for hepatitis A and B.","version":4,"programType":"WITHOUT_REGISTRATION","displayIncidentDate":true,"ignoreOverdueEvents":false,"onlyEnrollOnce":false,"selectEnrollmentDatesInFuture":false,"selectIncidentDatesInFuture":false,"categoryCombo":{"id":"bjDvmb4bfuf"},"enrollmentCategoryCombo":{"id":"bjDvmb4bfuf"},"skipOffline":false,"displayFrontPageList":false,"useFirstStageDuringRegistration":false,"expiryDays":0,"completeEventsExpiryDays":0,"openDaysAfterCoEndDate":0,"minAttributesRequiredToSearch":1,"maxTeiCountToReturn":0,"accessLevel":"OPEN","enableChangeLog":false,
 "sharing":{ "userGroups": {
     "YRf53KKIFEi":{"id":"YRf53KKIFEi", "access": "rwrw----"},
