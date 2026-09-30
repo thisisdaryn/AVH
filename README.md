@@ -1026,7 +1026,7 @@ The event program metadata creates **2 User groups**.
 
 <div id="tbl-user-groups">
 
-Table 3: Option sets used by the AVH event program
+Table 3: User groups associated with the AVH event program
 
 <div class="cell-output-display">
 
