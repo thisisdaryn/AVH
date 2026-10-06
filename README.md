@@ -1,6 +1,6 @@
 # AVH: Acute Viral Hepatitis Case Reporting (in DHIS2)
 
-2026-09-29
+2026-10-06
 
 
 This DHIS2 event program aims to support case reporting and surveillance
@@ -84,6 +84,54 @@ infection. The WHO has not recommended a vaccine for widespread use. WHO
 standards allow for case confirmation via laboratory confirmation or an
 epidemiological link to a laboratory confirmed case.
 
+## Laboratory testing for hepatitis viruses
+
+The table below lists some of the available laboratory tests for
+detecting hepatitis viruses.
+
+<div id="tbl-hep-labs">
+
+Table 1: Laboratory tests for hepatitis viruses
+
+<div class="cell-output-display">
+
+| Test | Description |
+|:---|:---|
+| Alanine aminotransferase (ALT) | Tests for elevated levels of ALT in blood which would indicate liver damage. The results are given in IU/L (international units per liter). |
+| Anti-HAV IgM | Detects IgM antibodies to the Hepatitis A virus |
+| Anti-HBc IgM | Detects IgM antibodies against Hepatitis B core antigen, a component of the Hep B virus |
+| HBsAg | Detects the presence of the Hepatitis B surface antigen |
+| Anti-HCV | Detects any antibodies against the Hepatitis C virus |
+| HCV RNA | Detects the RNA of the Hepatitis C virus (to confirm an active infection) |
+| HDV testing | Detects antibodies to the hepatitis D virus |
+| Anti-HEV IgM | Detects IgM antibodies against the Hepatitis C virus |
+
+</div>
+
+</div>
+
+## Laboratory confirmation criteria
+
+WHO guidance specifies certain allowable biomarker profiles appropriate
+for laboratory-confirmed case classifications for each hepatitis virus.
+
+<div id="tbl-hep-labconfprofiles">
+
+Table 2: WHO criteria for laboratory confirmation of acute hepatitis
+
+<div class="cell-output-display">
+
+| Virus | Lab-confirmation criteria for Acute Hepatitis |
+|:---|:---|
+| HAV | Someone who meets the presumptive case definition and is positive for IgM anti-HAV |
+| HBV | ELISA testing for immunoglobulin M antibodies to core antigen of hepatitis B (anti-HBC IgM) |
+| HCV | 1\. HCV-RNA positive and anti-HCV negative or 2. HCV-RNA positive in persons previously negative or 3. Occurrence with clinical acute hepatitis with a test positive for anti-HCV after exclusion of hepatitis A, B, and E. |
+| HDV | Someone who meets the presumptive case definition and is positive for IgM anti-HEV |
+
+</div>
+
+</div>
+
 # Installing the Event Program
 
 Successful installation of the AVH event program should involve the
@@ -105,7 +153,7 @@ following steps:
 
 ## Data Elements
 
-The program contains **97 data elements** organised into **12
+The program contains **103 data elements** organised into **12
 sections**. The table below lists all fields in section order with
 relevant details.
 
@@ -116,7 +164,7 @@ option set).
 
 <div id="tbl-data-elements">
 
-Table 1: All AVH event program data elements by section
+Table 3: All AVH event program data elements by section
 
 <div class="cell-output-display">
 
@@ -390,7 +438,7 @@ data-indentlevel="1">Date of Death</td>
 <td style="text-align: left;">DATE</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr data-grouplength="17">
+<tr data-grouplength="20">
 <td colspan="5" style="border-bottom: 1px solid"><strong>Laboratory and
 Biomarkers</strong></td>
 </tr>
@@ -439,21 +487,21 @@ data-indentlevel="1">Date Specimen Received at Laboratory</td>
 data-indentlevel="1">ALT Result (IU/L)</td>
 <td style="text-align: left;">AVH_ALTRESULT</td>
 <td style="text-align: left;">ZhYKYcwIBQx</td>
-<td style="text-align: left;">INTEGER_ZERO_OR_POSITIVE</td>
+<td style="text-align: left;">NUMBER</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
 <td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">Anti-HAV IgM Result</td>
-<td style="text-align: left;">AVH_ANTIHAV_IGM</td>
+data-indentlevel="1">Anti-HAV IgM</td>
+<td style="text-align: left;">AVH_ANTIHAV_IGM 13950-1</td>
 <td style="text-align: left;">xO51DTjBlUH</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Lab Result</td>
 </tr>
 <tr>
 <td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">IgM Anti-HBc Result</td>
-<td style="text-align: left;">AVH_ANTIHBC_IGM</td>
+data-indentlevel="1">IgM Anti-HBc</td>
+<td style="text-align: left;">AVH_ANTIHBC_IGM 24113-3</td>
 <td style="text-align: left;">ULru2p17fr4</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Lab Result</td>
@@ -468,40 +516,64 @@ data-indentlevel="1">Total Anti-HBc Result</td>
 </tr>
 <tr>
 <td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">HBsAg Result</td>
-<td style="text-align: left;">AVH_HBSAG</td>
+data-indentlevel="1">HBsAg</td>
+<td style="text-align: left;">AVH_HBSAG 5196-1</td>
 <td style="text-align: left;">AFJWpSEPTFC</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Lab Result</td>
 </tr>
 <tr>
 <td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">Anti-HCV Result</td>
-<td style="text-align: left;">AVH_ANTIHCV</td>
+data-indentlevel="1">Anti-HCV</td>
+<td style="text-align: left;">AVH_ANTIHCV 13955-0</td>
 <td style="text-align: left;">xEJHwBVJvwS</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Lab Result</td>
 </tr>
 <tr>
 <td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">HCV RNA Result</td>
-<td style="text-align: left;">AVH_HCVRNA</td>
+data-indentlevel="1">Previous Negative Anti-HCV test</td>
+<td style="text-align: left;">AVH_PREV_NEG_ANTIHCV</td>
+<td style="text-align: left;">D4GmBrVfpZr</td>
+<td style="text-align: left;">BOOLEAN</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left; padding-left: 2em;"
+data-indentlevel="1">Date of negative Anti-HCV test</td>
+<td style="text-align: left;">AVH_DATE_ANTIHCV_NEG</td>
+<td style="text-align: left;">Y616snuFKXW</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left; padding-left: 2em;"
+data-indentlevel="1">HCV RNA presence</td>
+<td style="text-align: left;">AVH_HCVRNA 11259-9</td>
 <td style="text-align: left;">I8WSlmnVErU</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Lab Result</td>
 </tr>
 <tr>
 <td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">HDV Testing Result</td>
-<td style="text-align: left;">AVH_HDVRESULT</td>
+data-indentlevel="1">HCV RNA viral load</td>
+<td style="text-align: left;">AVH_HCVRNA 11011-4</td>
+<td style="text-align: left;">pioHuaL05Jo</td>
+<td style="text-align: left;">NUMBER</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left; padding-left: 2em;"
+data-indentlevel="1">HDV Testing</td>
+<td style="text-align: left;">AVH_HDVRESULT 40727-0</td>
 <td style="text-align: left;">ltaTIircdJs</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Lab Result</td>
 </tr>
 <tr>
 <td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">Anti-HEV IgM Result</td>
-<td style="text-align: left;">AVH_ANTIHEV_IGM</td>
+data-indentlevel="1">Anti-HEV IgM</td>
+<td style="text-align: left;">AVH_ANTIHEV_IGM 14212-5</td>
 <td style="text-align: left;">sEECvl9dq83</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Lab Result</td>
@@ -509,7 +581,7 @@ data-indentlevel="1">Anti-HEV IgM Result</td>
 <tr>
 <td style="text-align: left; padding-left: 2em;"
 data-indentlevel="1">HBV Genotype (if performed)</td>
-<td style="text-align: left;">AVH_HBVGENOTYPE</td>
+<td style="text-align: left;">AVH_HBVGENOTYPE 104995-6</td>
 <td style="text-align: left;">jjZK8tfphJW</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;"></td>
@@ -558,42 +630,6 @@ data-indentlevel="1">Source of Infection</td>
 <td style="text-align: left;">LJ9YV5cC6ZK</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Source of Infection</td>
-</tr>
-<tr data-grouplength="4">
-<td colspan="5"
-style="border-bottom: 1px solid"><strong>Reporting</strong></td>
-</tr>
-<tr>
-<td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">Date of Reporting</td>
-<td style="text-align: left;">AVH_DATEREPORT</td>
-<td style="text-align: left;">bu7g1TPvYji</td>
-<td style="text-align: left;">DATE</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">Reporting Facility</td>
-<td style="text-align: left;">AVH_REPFACILITY</td>
-<td style="text-align: left;">CNa5fbqn1jJ</td>
-<td style="text-align: left;">TEXT</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">Date of Notification to Public Health</td>
-<td style="text-align: left;">AVH_DATENOTIF</td>
-<td style="text-align: left;">pAOYNDeh15F</td>
-<td style="text-align: left;">DATE</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left; padding-left: 2em;"
-data-indentlevel="1">Date of Investigation</td>
-<td style="text-align: left;">AVH_DATEINVESTIG</td>
-<td style="text-align: left;">aNwpKAlQQfH</td>
-<td style="text-align: left;">DATE</td>
-<td style="text-align: left;"></td>
 </tr>
 <tr data-grouplength="5">
 <td colspan="5" style="border-bottom: 1px solid"><strong>Case
@@ -978,8 +1014,81 @@ C?</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">AVH - Yes / No / Unknown</td>
 </tr>
+<tr data-grouplength="4">
+<td colspan="5"
+style="border-bottom: 1px solid"><strong>Reporting</strong></td>
+</tr>
+<tr>
+<td style="text-align: left; padding-left: 2em;"
+data-indentlevel="1">Date of Reporting</td>
+<td style="text-align: left;">AVH_DATEREPORT</td>
+<td style="text-align: left;">bu7g1TPvYji</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left; padding-left: 2em;"
+data-indentlevel="1">Reporting Facility</td>
+<td style="text-align: left;">AVH_REPFACILITY</td>
+<td style="text-align: left;">CNa5fbqn1jJ</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left; padding-left: 2em;"
+data-indentlevel="1">Date of Notification to Public Health</td>
+<td style="text-align: left;">AVH_DATENOTIF</td>
+<td style="text-align: left;">pAOYNDeh15F</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left; padding-left: 2em;"
+data-indentlevel="1">Date of Investigation</td>
+<td style="text-align: left;">AVH_DATEINVESTIG</td>
+<td style="text-align: left;">aNwpKAlQQfH</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
+
+</div>
+
+</div>
+
+### Data Elements for laboratory test results
+
+The data elements for include LOINC(Regenstrief Institute)
+classification codes in their names/codes as well as in metadata
+attributes. The table below lists all the data elements included in the
+metadata JSON file along with the corresponding *Common Long Name* in
+the LOINC classification database.
+
+(Note that two of data elements in the table are not included by default
+in the AVH data capture form. DHIS2 instance administrators can include
+these data elements - or create others - to more accurately reflect the
+laboratory tests used, if necessary.)
+
+<div id="tbl-loinc-codes">
+
+Table 4: Laboratory-confirmation criteria for acute hepatitis hepatitis
+
+<div class="cell-output-display">
+
+| Data Element | Form Name | LOINC Common Long Name | Note |
+|:---|:---|:---|:---|
+| AVH_ANTIHAV_IGM 13950-1 | Anti-HAV IgM | Hepatitis A virus IgM Ab \[Presence\] in Serum or Plasma by Immunoassay |  |
+| AVH_ANTIHBC_IGM 24113-3 | IgM Anti-HBc | Hepatitis B virus core IgM Ab \[Presence\] in Serum or Plasma by Immunoassay |  |
+| AVH_HBSAG 5196-1 | HBsAg | Hepatitis B virus surface Ag \[Presence\] in Serum or Plasma by Immunoassay |  |
+| AVH_ANTIHCV 13955-0 | Anti-HCV | Hepatitis C virus Ab \[Presence\] in Serum or Plasma by Immunoassay |  |
+| AVH_ANTIHCV 16128-1 | Anti-HCV | Hepatitis C virus Ab \[Presence\] in Serum | Not included in default data capture form |
+| AVH_HCVRNA 11259-9 | HCV RNA presence | Hepatitis C virus RNA \[Presence\] in Serum or Plasma by NAA with probe detection |  |
+| AVH_HCVRNA 11011-4 | HCV RNA viral load | Hepatitis C virus RNA \[Units/volume\] (viral load) in Serum or Plasma by NAA with probe detection |  |
+| AVH_HDVRESULT 40727-0 | HDV Testing | Hepatitis D virus Ab \[Presence\] in Serum by Immunoassay |  |
+| AVH_ANTIHEV_IGM 14212-5 | Anti-HEV IgM | Hepatitis E virus IgM Ab \[Presence\] in Serum |  |
+| AVH_ANTIHEV_IGM 83128-9 | Anti-HEV IgM | Hepatitis E virus IgM Ab \[Presence\] in Serum or Plasma by Immunoassay | Not included in default data capture form |
+| AVH_HBVGENOTYPE 104995-6 | HBV Genotype (if performed) | Hepatitis B virus genotype \[Identifier\] in Serum or Plasma by Sequencing |  |
 
 </div>
 
@@ -996,7 +1105,7 @@ option sets at their discretion.
 
 <div id="tbl-option-sets">
 
-Table 2: Option sets used by the AVH event program
+Table 5: Option sets used by the AVH event program
 
 <div class="cell-output-display">
 
@@ -1026,7 +1135,7 @@ The event program metadata creates **2 User groups**.
 
 <div id="tbl-user-groups">
 
-Table 3: User groups associated with the AVH event program
+Table 6: User groups associated with the AVH event program
 
 <div class="cell-output-display">
 
@@ -1041,7 +1150,7 @@ Table 3: User groups associated with the AVH event program
 
 <div id="tbl-user-groups-privileges">
 
-Table 4: Metadata and Data privileges of user groups
+Table 7: Metadata and Data privileges of user groups
 
 <div class="cell-output-display">
 
@@ -1068,7 +1177,7 @@ pre-existing user role for accounts being used to carry out data entry.
 
 ## Program Rules
 
-The event program metadata includes **38 Program Rules**. These rules
+The event program metadata includes **43 Program Rules**. These rules
 collectively serve to streamline data capture, enforce consistency
 between related data inputs, and to ensure that mandatory data fields
 are captured before an event is marked as `Complete`.
@@ -1077,7 +1186,7 @@ The table below gives descriptions of each of the Program Rules.
 
 <div id="tbl-program-rules">
 
-Table 5: AVH Program Rules
+Table 8: AVH Program Rules
 
 <div class="cell-output-display">
 
@@ -1089,7 +1198,7 @@ Table 5: AVH Program Rules
 | Always hide AVH_HEPE_FINALCLASS | Hides Hepatitis E final classification. This value is set by a program rule based on the overall final case classification. |
 | Assign Event Date to Date of Visit and Hide Field | Hides the Date of Visit field and sets its value to the event date. This avoids duplication in the data entry form while allowing the Date of Visit field to be used in downstream queries and visualizations. |
 | Classification: Hepatitis A — Epidemiologically linked | If the final case classification is Hepatitis A - Epidemiologically linked then: 1) Set Hep A case classification to EpiLinked 2) Set Hep B, Hep C, and Hep E case classifications to Discarded |
-| Classification: Hepatitis A — Laboratory-confirmed | If the final case classification is Hep A - Lab confirmed then: 1) Set Hep A case classification to Lab confirmed 2) Set Hep B, Hep C, and Hep E case classifications to Discarded |
+| Classification: Hepatitis A — Laboratory-confirmed | If the final case classification is Hep A - Lab-confirmed then: 1) Set Hep A case classification to LabConfirmed 2) Set Hep B, Hep C, and Hep E case classifications to Discarded |
 | Classification: Hepatitis B — Laboratory-confirmed | If the final case classification is Hepatitis B - Lab-confirmed then: 1) Set Hep B case classification to Lab confirmed 2) Set Hep A, Hep C, and Hep E case classifications to Discarded |
 | Classification: Hepatitis C — Laboratory-confirmed | If the final case classification is Hepatitis C - Lab-confirmed then: 1) Set Hep C case classification to Lab confirmed 2) Set Hep A, Hep B, and Hep E case classifications to Discarded |
 | Classification: Hepatitis E — Epidemiologically linked | If the final case classification is Hep E - Epidemiologically linked then: 1) Set Hep E case classification to EpiLinked 2) Set Hep A, Hep B, and Hep C case classifcations to Discarded |
@@ -1104,31 +1213,42 @@ Table 5: AVH Program Rules
 | Completion: IgM anti-HBc required for Hepatitis B lab-confirmed classification | Ensuring that the test result is recorded for a Hep B lab-confirmed classification. |
 | Completion: Sex Required | Ensuring that the patient's sex is recorded. |
 | Completion: Specimen Collected is required | Ensuring that specimen collection (Yes/No/Unknown) is documented. |
-| Completion: Unique Identifier Required | Ensuring that a unique patient ID is entered. |
+| Completion: Unique Identifier Required | Ensures that a Patient Identifier is recorded |
+| Completion: Valid biomarker profile needed for Hepatitis C lab-confirmed | Ensures that one of the valid biomarker profile is recorded to accompany a hepatitis C lab-confirmed case classification. |
+| Error: Anti-HAV IgM must be Positive for Hepatitis A lab-confirmed | Ensuring that the appropriate laboratory test is recorded to substantiate a Hepatitis A lab-confirmed case classification. |
+| Error: Anti-HEV IgM must be Positive for Hepatitis E lab-confirmed | Ensuring that the appropriate laboratory test is recorded to substantiate a Hepatitis E lab-confirmed case classification. |
 | Error: Contact with confirmed case required for epi-linked classification | Ensuring that contact with a confirmed case is recorded consistent with epi-linked case classification (Hep A or Hep E). |
-| Error: Specimen required for lab-confirmed classification | Ensuring that a collected specimen is recorded consistent with a lab-confirmed case classification. |
+| Error: IgM anti-HBc must be Positive for Hepatitis B lab-confirmed | Ensuring that the appropriate laboratory test is recorded to substantiate a Hepatitis B lab-confirmed case classification. |
 | Error: Onset date after visit date | Ensuring that the date of symptom onset is not later than the date of the visit. |
-| Reminder: Record All Laboratory Tests Performed | Show reminder to enter all available test results. |
-| Note: Final Case Classification Requirements | Show reminder of final case classification criteria. |
+| Error: Specimen required for lab-confirmed classification | Ensuring that a collected specimen is recorded consistent with a lab-confirmed case classification. |
 | Hide Age in Months when DOB entered or Age Years \> 0 | Hides the Age in Months field if DOB or Age in Years \>= 1 are recorded. |
 | Hide Associated Case ID when No Contact with Case | Hide field for associated case ID when there's no contact with a confirmed case. |
 | Hide Combined Hepatitis A+B Vaccination Details when Not Vaccinated | Hide field for details when the patient was not vaccinated with Hep A+B vaccine. |
+| Hide Date of Death when Outcome is not Death | Hide date of death field when the outcome is not death. |
+| Hide HBV Genotype unless HBsAg Positive | Hide field for HBV Genotype unless HBsAg test result is Positive. |
+| Hide HCV RNA unless Anti-HCV Positive | Hide HCV RNA details unless Anti-HCV is Positive |
 | Hide Hepatitis A Vaccination Details when Not Vaccinated | Hide fields for details when the patient was not vaccinated with Hep A vaccine. |
 | Hide Hepatitis B Vaccination Details when Not Vaccinated | Hide fields for details when the patient was not vaccinated with Hep B vaccine. |
 | Hide Hepatitis E Vaccination Details when Not Vaccinated | Hide field for details when the patient was not vaccinated with Hep E vaccine. |
-| Hide Laboratory Fields when No Specimen Collected | Hide fields for laboratory tests when no collected specimen is recorded. |
-| Hide Date of Death when Outcome is not Death | Hide date of death field when the outcome is not death. |
 | Hide Hospitalization and Discharge Dates when Not Hospitalized | Hide fields for details of hospitalization when patient was not hospitalized. |
-| Hide HBV Genotype unless HBsAg Positive | Hide field for HBV Genotype unless HBsAg test result is Positive. |
-| Hide HCV RNA unless Anti-HCV Positive | Hide field: AVH - HCV RNA Result |
+| Hide Laboratory Fields when No Specimen Collected | Hide fields for laboratory tests when no collected specimen is recorded. |
+| Info: Enter DOB or age | Reminds user to enter patient's DOB or age. |
+| Note: Final Case Classification Requirements | Show reminder of final case classification criteria. |
+| Reminder: Record All Laboratory Tests Performed | Show reminder to enter all available test results. |
 
 </div>
 
 </div>
-
-# References
 
 <div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-LOINC" class="csl-entry">
+
+Regenstrief Institute. *LOINC - LOINC Is the International Standard
+for Identifying Health Observations, Measurements, and Documents.*
+<a href="https://loinc.org/" class="uri">Https://loinc.org/</a>.
+
+</div>
 
 <div id="ref-who2016technicalhep" class="csl-entry">
 
