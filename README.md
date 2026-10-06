@@ -1240,6 +1240,8 @@ Table 8: AVH Program Rules
 
 </div>
 
+# References
+
 <div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-LOINC" class="csl-entry">
